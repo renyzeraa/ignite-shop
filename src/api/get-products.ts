@@ -7,6 +7,7 @@ export interface GetProductsResponse {
     description: string | null;
     image: string;
     price: string;
+    priceId?: string;
 }
 
 export async function getProducts(): Promise<{ products: GetProductsResponse[] }> {
@@ -31,7 +32,27 @@ export async function getProductById(id: string): Promise<GetProductsResponse | 
         return null;
     }
 
-    return formatProduct(product);
+    return {
+        ...formatProduct(product),
+        priceId: (product.default_price as Stripe.Price).id,
+    };
+}
+
+export async function getProductBySessionId(sessionId: string) {
+    const session = await stripe.checkout.sessions.retrieve(sessionId, {
+        expand: ['line_items', 'line_items.data.price.product']
+    });
+
+    const costumerName = session?.customer_details?.name;
+    const product = session?.line_items?.data[0]?.price?.product as Stripe.Product;
+
+    return {
+        costumerName,
+        product: {
+            name: product.name,
+            imageUrl: product.images[0]
+        }
+    }
 }
 
 function formatProductPrice(defaultPrice: Stripe.Price): string {

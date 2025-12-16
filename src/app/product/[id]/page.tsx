@@ -1,4 +1,5 @@
 import { getProductById } from "@/api/get-products";
+import { BuyButton } from "@/components/buy-button";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
@@ -65,9 +66,9 @@ export default async function Product({ params }: ProductPageProps) {
                     {product.description}
                 </p>
 
-                <button className='mt-auto bg-green-700 rounded-lg p-5 text-white font-bold text-lg cursor-pointer hover:bg-green-500 transition-colors'>
-                    Comprar agora
-                </button>
+                <BuyButton
+                    priceId={product.priceId!}
+                />
             </div>
         </main>
     );
