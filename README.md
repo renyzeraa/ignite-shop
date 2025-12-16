@@ -12,6 +12,9 @@ Ignite Shop é uma aplicação de e-commerce totalmente funcional que permite ao
 -   **Confirmação de compra** - Página de sucesso com detalhes da transação
 -   **SEO otimizado** - Meta tags, Open Graph e estruturação semântica
 
+**Para realizar compras usar cartões de teste da [stripe](https://docs.stripe.com/testing)** 
+
+
 ## 🎯 Recursos Implementados
 
 ### Next.js Features
