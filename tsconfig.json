@@ -21,7 +21,8 @@
     "paths": {
       "@/*": ["./*"]
     },
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "src/"
   },
   "include": [
     "next-env.d.ts",
