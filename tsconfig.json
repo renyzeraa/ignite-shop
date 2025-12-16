@@ -19,11 +19,9 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"],
+      "@/*": ["./*"]
     },
-    "allowSyntheticDefaultImports": true,
-    "baseUrl": "src/",
-    "ignoreDeprecations": "6.0"
+    "allowSyntheticDefaultImports": true
   },
   "include": [
     "next-env.d.ts",
