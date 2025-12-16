@@ -133,22 +133,22 @@ npm run lint      # Executa linting do código
 
 ```
 ┌──────────────────────────────────────────────────────────┐
-│                    Home Page                              │
-│  (Listagem de produtos do Stripe)                         │
+│                    Home Page                             │
+│  (Listagem de produtos do Stripe)                        │
 └──────────────────────────────────────────────────────────┘
                         ↓
 ┌──────────────────────────────────────────────────────────┐
-│              Página do Produto                             │
+│              Página do Produto                           │
 │  (Detalhes completos + Botão de compra)                  │
 └──────────────────────────────────────────────────────────┘
                         ↓
 ┌──────────────────────────────────────────────────────────┐
-│           Checkout Stripe (Modal/Redirect)                │
-│  (Formulário de pagamento seguro)                         │
+│           Checkout Stripe (Modal/Redirect)               │
+│  (Formulário de pagamento seguro)                        │
 └──────────────────────────────────────────────────────────┘
                         ↓
 ┌──────────────────────────────────────────────────────────┐
-│              Página de Sucesso                             │
+│              Página de Sucesso                           │
 │  (Confirmação com detalhes do pedido)                    │
 └──────────────────────────────────────────────────────────┘
 ```
