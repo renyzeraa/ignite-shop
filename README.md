@@ -24,17 +24,6 @@ Ignite Shop é uma aplicação de e-commerce totalmente funcional que permite ao
 -   **Metadata API** - Geração dinâmica de meta tags para SEO
 -   **Static Generation & ISR** - Pré-renderização estática com revalidação incremental
 
-### Arquitetura
-
-```
-src/
-├── app/                 # App Router pages e layouts
-├── api/                 # API routes e integrações
-├── components/          # Componentes React reutilizáveis
-├── lib/                 # Utilitários e helpers
-└── assets/              # Imagens e recursos estáticos
-```
-
 ## 🛠️ Tecnologias Utilizadas
 
 | Tecnologia       | Descrição                                               |
@@ -44,8 +33,7 @@ src/
 | **TypeScript**   | Tipagem estática para maior segurança                   |
 | **Tailwind CSS** | Framework CSS utilitário                                |
 | **Stripe API**   | Processamento de pagamentos e gerenciamento de produtos |
-| **ESLint**       | Linting e qualidade de código                           |
-| **PostCSS**      | Pós-processamento de CSS                                |
+| **Keen Slider**  | Lib de componente de carrossel                          |
 
 ## 🎨 Design
 
