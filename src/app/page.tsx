@@ -1,9 +1,23 @@
-export default function Home() {
+
+
+import { Slider } from '@/components/slider';
+import { Product } from '@/components/product';
+import { getProducts } from '@/api/get-products';
+
+export default async function Home() {
+  const { products } = await getProducts()
+
   return (
-    <button
-      className="bg-green-500 rounded-sm border-none py-1 px-2 hover:brightness-75 transition-colors cursor-pointer"
-    >
-      Hello World
-    </button>
+    <Slider>
+      {products.map(({ id, image, name, price }) => (
+        <Product
+          key={id}
+          title={name}
+          price={`R$ ${price}`}
+          imgSrc={image}
+          href={`product/${id}`}
+        />
+      ))}
+    </Slider>
   );
 }
